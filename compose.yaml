@@ -1,0 +1,47 @@
+services:
+  mariadb:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: RootHestim2026
+      MARIADB_DATABASE: glpi
+      MARIADB_USER: glpi
+      MARIADB_PASSWORD: GlpiHestim2026
+    volumes:
+      - glpi-db:/var/lib/mysql
+    networks:
+      - glpi-net
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+ 
+  glpi:
+    image: glpi/glpi:11.0
+    restart: unless-stopped
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    environment:
+      GLPI_DB_HOST: mariadb
+      GLPI_DB_PORT: 3306
+      GLPI_DB_NAME: glpi
+      GLPI_DB_USER: glpi
+      GLPI_DB_PASSWORD: GlpiHestim2026
+    ports:
+      - "8080:80"
+    volumes:
+      - glpi-data:/var/glpi
+      - ./branding:/var/www/glpi/public/pics/branding:ro
+    networks:
+      - glpi-net
+ 
+volumes:
+  glpi-db:
+  glpi-data:
+ 
+networks:
+  glpi-net:
+
