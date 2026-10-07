@@ -441,7 +441,7 @@ Ce projet permet de pratiquer plusieurs concepts fondamentaux :
 
 Projet réalisé dans le cadre d'un apprentissage pratique de :
 
-**Docker · DevOps · Aver Mr.KHIAT**
+**Docker · DevOps · AveC Mr.KHIAT**
 
 ---
 
