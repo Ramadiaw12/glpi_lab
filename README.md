@@ -271,7 +271,7 @@ Une première machine a été ajoutée dans GLPI afin de tester la gestion de pa
 Exemple :
 
 ```text
-Nom              : PC-SUPERAMA-01
+Nom              : PC-RAMA-01
 Numéro de série  : SN-2026-001
 ```
 
