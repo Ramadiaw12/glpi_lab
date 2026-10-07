@@ -437,11 +437,11 @@ Ce projet permet de pratiquer plusieurs concepts fondamentaux :
 
 ## 👤 Auteur
 
-**Superrama**
+**DIAWANE Ramatoulaye**
 
 Projet réalisé dans le cadre d'un apprentissage pratique de :
 
-**Docker · DevOps · Administration système · Gestion de parc informatique**
+**Docker · DevOps · Aver Mr.KHIAT**
 
 ---
 
